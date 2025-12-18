@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">모델 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--wide">
+
+          <!-- 상단 툴바 -->
+          <div class="page-toolbar">
+            <!-- 좌측 -->
+            <div class="toolbar-left">
+              <div class="form-search">
+                <span class="form-search-icon" aria-hidden="true"></span>
+                <input type="search" placeholder="검색어를 입력해주세요">
+              </div>
+              <select class="form-select">
+                <option value="" selected disabled hidden>상태</option>
+                <option value="active">활성</option>
+                <option value="inactive">비활성</option>
+              </select>
+            </div>
+
+            <!-- 우측 -->
+            <div class="toolbar-right">
+              <!-- 액션 버튼 -->
+            </div>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <div class="card-grid">
+              <a href="#" class="model-card">
+                <div class="model-card-head">
+                  <img src="../assets/img/model/logo-kt.png" alt="kt" />
+                </div>
+
+                <div class="model-card-body">
+                  <h6 class="model-name">믿음 2.0 Pro</h6>
+                  <p class="model-desc">한국어 특화 KT 대형 언어모델</p>
+                </div>
+
+                <div class="model-card-meta">
+                  <span class="model-updated">Updated 2025.11.01</span>
+                </div>
+              </a>
+
+              <a href="#" class="model-card">
+                <div class="model-card-head">
+                  <img src="../assets/img/model/logo-wisenut.png" alt="wisenut" />
+                </div>
+
+                <div class="model-card-body">
+                  <h6 class="model-name">WISE LLM</h6>
+                  <p class="model-desc">산업별 맞춤형 한국어 비즈니스 LLM</p>
+                </div>
+
+                <div class="model-card-meta">
+                  <span class="model-updated">Updated 2025.11.01</span>
+                </div>
+              </a>
+
+              <a href="#" class="model-card">
+                <div class="model-card-head">
+                  <img src="../assets/img/model/logo-konan.png" alt="konan" />
+                </div>
+
+                <div class="model-card-body">
+                  <h6 class="model-name">KONAN ENT-11</h6>
+                  <p class="model-desc">일반·추론 통합형 고효율 LLM</p>
+                </div>
+
+                <div class="model-card-meta">
+                  <span class="model-updated">Updated 2025.11.01</span>
+                </div>
+              </a>
+
+              <a href="#" class="model-card">
+                <div class="model-card-head">
+                  <img src="../assets/img/model/logo-upstage.png" alt="upstage" />
+                </div>
+
+                <div class="model-card-body">
+                  <h6 class="model-name">Solar Pro2</h6>
+                  <p class="model-desc">한국어·다국어 모두 강력한 업스테이지 모델</p>
+                </div>
+
+                <div class="model-card-meta">
+                  <span class="model-updated">Updated 2025.11.01</span>
+                </div>
+              </a>
+
+              <a href="#" class="model-card">
+                <div class="model-card-head">
+                  <img src="../assets/img/model/logo-meta.png" alt="meta" />
+                </div>
+
+                <div class="model-card-body">
+                  <h6 class="model-name">Llama 4</h6>
+                  <p class="model-desc">멀티모달·MoE 구조의 Meta 4세대 LLM</p>
+                </div>
+
+                <div class="model-card-meta">
+                  <span class="model-updated">Updated 2025.11.01</span>
+                </div>
+              </a>
+
+              <a href="#" class="model-card model-card--add">
+                <div class="model-add-icon">
+                  <span class="icon24 icon--add icon--inverse icon"></span>
+                </div>
+                <span class="model-add-text">새 모델 등록하기</span>
+              </a>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+
+</body>
+</html>

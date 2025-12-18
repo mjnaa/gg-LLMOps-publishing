@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">프로젝트 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">프로젝트 상세</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="프로젝트 상세 폼">
+
+              <div class="form-layout">
+                <!-- 기본 정보 -->
+                <div class="info-table">
+                  <table class="kv-table">
+                    <caption class="visually-hidden">프로젝트 기본 정보</caption>
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col>
+                      <col style="width: 160px;">
+                      <col>
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">프로젝트 ID</th>
+                        <td class="is-nowrap">kai_gg_01</td>
+
+                        <th scope="row">프로젝트명</th>
+                        <td>경기도청 프로젝트</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">프로젝트 설명</th>
+                        <td>경기도청 프로젝트</td>
+
+                        <th scope="row">프로젝트 관리자</th>
+                        <td class="is-nowrap">우상*</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">상태</th>
+                        <td>
+                          <span class="status-chip status-chip--requested">신청</span>
+                        </td>
+
+                        <th scope="row">비고</th>
+                        <td>테스트 환경에서 우선 적용 후 운영 전환 예정</td>
+                      </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="form-layout">
+                <!-- 고급 설정 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="project-domain">Domain</label>
+                      <select class="form-select" id="project-domain" disabled>
+                        <option value="op1" selected>default</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="project-policy">Resource Policy(optional)</label>
+                      <select class="form-select" id="project-policy" disabled>
+                        <option value="op1" selected>project_resource_policy</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="project-groups">Allowed Resouce Groups(optional)</label>
+                      <select class="form-select" id="project-groups" disabled>
+                        <option value="op1" selected>default</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="project-hosts">Aowed Folder Hosts(optional)</label>
+                      <select class="form-select" id="project-hosts" disabled>
+                        <option value="op1" selected>sp1nas</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" id="project-resource-limit-label">Max allowed CPU / Memory(optional)</label>
+                      
+                      <div class="form-group form-group--4-unit" role="group" aria-labelledby="project-resource-limit-label">
+                        <input type="text" id="project-max-cpu" class="form-input" placeholder="" disabled>
+                        <select class="form-select" id="project-max-cpu-unit" disabled>
+                          <option value="op1" selected>core</option>
+                        </select>
+
+                        <input type="text" id="project-max-memory" class="form-input" placeholder="" disabled>
+                        <select class="form-select" id="project-max-memory-unit" disabled>
+                          <option value="op1" selected>GiB</option>
+                        </select>  
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" id="project-registry-label">Container Registry for Image Commit(optional)</label>
+
+                      <div class="form-group form-group--2" role="group" aria-labelledby="project-registry-label">
+                        <input type="text" id="project-registry-url" class="form-input" placeholder="Registry" disabled>
+                        <input type="text" id="project-registry-project" class="form-input" placeholder="Project" disabled>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div>
+                      <label class="form-checkbox-label" for="project-is-active">
+                        <input type="checkbox" id="project-is-active" class="form-checkbox" checked disabled>Is Active?
+                      </label>
+                    </div>  
+                  </div>
+
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                    <button type="button" class="btn-outline-gray-l">생성</button>
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="button" class="btn-solid-primary-l">수정</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+</body>
+</html>

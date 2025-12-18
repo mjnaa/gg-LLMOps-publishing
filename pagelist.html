@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title>경기도 생성형 LLMOps 퍼블리싱 리스트</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" />
+  <style>
+    body {
+      font-family: 'Segoe UI', 'Noto Sans KR', sans-serif;
+      background:#2C2D30;
+      color:#f0f0f0;
+      padding:30px 40px;
+    }
+    h1 { font-size:20px; margin-bottom:8px; }
+    p { margin-bottom:24px; color:#bbb; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th, td {
+      padding:8px 10px;
+      border:1px solid #555;
+      text-align:left;
+    }
+    th {
+      background:#656565;
+      border:1px solid #8a8a8a;
+      font-weight:500;
+      color:#fff;
+    }
+    .border-bold{border-bottom:4px double #555;}
+    a { color:#d5d5d5; text-decoration:none; }
+    a:hover { text-decoration:underline; }
+    .acenter {text-align:center;}
+    .status-done { color:#4ade80; font-weight:600; }   /* 완료 */
+    .status-ing { color:#facc15; font-weight:600; }    /* 작업중 */
+    .status-todo { color:#f87171; font-weight:600; }   /* 미작업 */
+  </style>
+</head>
+<body>
+  <h1>경기도 생성형 LLMOps 퍼블리싱 리스트</h1>
+  <p>파일명을 클릭하면 해당 퍼블리싱 화면으로 이동합니다.</p>
+
+  <table>
+    <colgroup>
+      <col />
+    </colgroup>
+    <thead>
+      <tr>
+        <th>서비스</th>
+        <th>기능</th>
+        <th>파일명(클릭)</th>
+        <th>진행상태</th>
+        <th>비고</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- 공통 -->
+      <tr class="border-bold">
+        <td rowspan="1">00-공통</td>
+        <td>공통 레이아웃</td>
+        <td><a href="./pages/00-layout.html" target="_blank">00-layout.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+        </td>
+      </tr>
+
+      <!-- 대시보드 -->
+      <tr class="border-bold">
+        <td rowspan="1">10-대시보드</td>
+        <td>대시보드</td>
+        <td><a href="./pages/10-dashboard.html" target="_blank">10-dashboard.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+        </td>
+      </tr>
+
+      <!-- 모델 관리 -->
+      <tr>
+        <td rowspan="3">20-모델 관리</td>
+        <td>모델 관리</td>
+        <td><a href="./pages/20-model-list.html" target="_blank">20-model-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 관리 / 새 모델 등록</td>
+        <td><a href="./pages/21-model-create.html" target="_blank">21-model-create.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>모델 관리 / 모델 수정</td>
+        <td><a href="./pages/22-model-edit.html" target="_blank">22-model-edit.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+
+      <!-- 이미지 관리 -->
+      <tr>
+        <td rowspan="3">30-이미지 관리</td>
+        <td>이미지 관리</td>
+        <td><a href="./pages/30-image-list.html" target="_blank">30-image-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>이미지 관리 / 새 이미지 등록</td>
+        <td><a href="./pages/31-image-create.html" target="_blank">31-image-create.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>이미지 관리 / 이미지 수정</td>
+        <td><a href="./pages/32-image-edit.html" target="_blank">32-image-edit.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+
+      <!-- 프로젝트 관리 -->
+      <tr>
+        <td rowspan="3">40-프로젝트 관리</td>
+        <td>프로젝트 관리</td>
+        <td><a href="./pages/40-project-list.html" target="_blank">40-project-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>프로젝트 관리 / 프로젝트 추가</td>
+        <td><a href="./pages/41-project-create.html" target="_blank">41-project-create.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr class="border-bold">
+      <tr class="border-bold">
+        <td>프로젝트 관리 / 프로젝트 상세</td>
+        <td><a href="./pages/42-project-detail.html" target="_blank">42-project-detail.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+
+      <!-- 모델 배포 관리 -->
+      <tr>
+        <td rowspan="5">50-모델 배포 관리</td>
+        <td>모델 배포 관리</td>
+        <td><a href="./pages/50-deploy-list.html" target="_blank">50-deploy-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 배포 관리 / 새 배포 / 1단계</td>
+        <td><a href="./pages/51-deploy-create-step1.html" target="_blank">51-deploy-create-step1.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 배포 관리 / 새 배포 / 2단계</td>
+        <td><a href="./pages/52-deploy-create-step2.html" target="_blank">52-deploy-create-step2.html</a></td>
+        <td class="status-ing">작업중</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 배포 관리 / 새 배포 / 3단계</td>
+        <td><a href="./pages/53-deploy-create-step3.html" target="_blank">53-deploy-create-step3.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>모델 배포 관리 / 새 배포 / 4단계</td>
+        <td><a href="./pages/54-deploy-create-step4.html" target="_blank">54-deploy-create-step4.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+
+      <!-- 모델 학습 관리 -->
+      <tr>
+        <td rowspan="7">60-모델 학습 관리</td>
+        <td>모델 학습 관리</td>
+        <td><a href="./pages/60-train-list.html" target="_blank">60-train-list.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 학습 관리 / 새 모델 학습 / 1단계</td>
+        <td><a href="./pages/61-train-create-step1.html" target="_blank">61-train-create-step1.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 학습 관리 / 새 모델 학습 / 2단계</td>
+        <td><a href="./pages/62-train-create-step2.html" target="_blank">62-train-create-step2.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 학습 관리 / 새 모델 학습 / 3단계</td>
+        <td><a href="./pages/63-train-create-step3.html" target="_blank">63-train-create-step3.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 학습 관리 / 새 모델 학습 / 4단계</td>
+        <td><a href="./pages/64-train-create-step4.html" target="_blank">64-train-create-step4.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>모델 학습 관리 / 새 모델 학습 / 5단계</td>
+        <td><a href="./pages/65-train-create-step5.html" target="_blank">65-train-create-step5.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>모델 학습 관리 / 학습 모델 상세</td>
+        <td><a href="./pages/66-train-detail.html" target="_blank">66-train-detail.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+
+      <!-- API 관리 -->
+      <tr>
+        <td rowspan="3">70-API 관리</td>
+        <td>API 관리</td>
+        <td><a href="./pages/70-api-list.html" target="_blank">70-api-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>API 관리 / 새 API 등록</td>
+        <td><a href="./pages/71-api-create.html" target="_blank">71-api-create.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>API 관리 / API 상세</td>
+        <td><a href="./pages/72-api-detail.html" target="_blank">72-api-detail.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+
+      <!-- API 키 관리 -->
+      <tr>
+        <td rowspan="5">80-API 키 관리</td>
+        <td>API 키 관리</td>
+        <td><a href="./pages/80-api-key-list.html" target="_blank">80-api-key-list.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>API 키 관리 / 새 API 키 생성</td>
+        <td><a href="./pages/81-api-key-create.html" target="_blank">81-api-key-create.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>API 키 관리 / API 키 상세</td>
+        <td><a href="./pages/82-api-key-detail.html" target="_blank">82-api-key-detail.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>API 키 관리 / API 키 수정</td>
+        <td><a href="./pages/83-api-key-edit.html" target="_blank">83-api-key-edit.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>API 키 관리 / API 키 승인</td>
+        <td><a href="./pages/84-api-key-approve.html" target="_blank">84-api-key-approve.html</a></td>
+        <td class="status-done">완료</td>
+        <td></td>
+      </tr>
+
+      <!-- 평가 관리 -->
+      <tr>
+        <td rowspan="4">90-평가 관리</td>
+        <td>평가 관리</td>
+        <td><a href="./pages/90-evaluation-list.html" target="_blank">90-evaluation-list.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>평가 관리 / 평가 생성 / 1단계</td>
+        <td><a href="./pages/91-evaluation-create-step1.html" target="_blank">91-evaluation-create-step1.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>평가 관리 / 평가 생성 / 2단계</td>
+        <td><a href="./pages/92-evaluation-create-step2.html" target="_blank">92-evaluation-create-step2.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr class="border-bold">
+        <td>평가 관리 / 평가 조회</td>
+        <td><a href="./pages/93-evaluation-detail.html" target="_blank">93-evaluation-detail.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+
+      <!-- 이상 탐지 관리 -->
+      <tr>
+        <td rowspan="2">100-이상 탐지 관리</td>
+        <td>이상 탐지 관리</td>
+        <td><a href="./pages/100-anomaly-list.html" target="_blank">100-anomaly-list.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>이상 탐지 관리 / 이상 탐지 처리</td>
+        <td><a href="./pages/110-anomaly-handle.html" target="_blank">110-anomaly-handle.html</a></td>
+        <td class="status-todo">작업예정</td>
+        <td></td>
+      </tr>
+
+    </tbody>
+  </table>
+</body>
+</html>

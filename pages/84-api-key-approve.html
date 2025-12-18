@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">API 키 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">API 키 승인</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="API 키 승인 폼">
+
+              <div class="form-layout">
+
+                <div class="info-table mb20">
+                  <table class="kv-table">
+                    <caption class="visually-hidden">API 키 상세 정보</caption>
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col>
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">키 ID</th>
+                        <td>7654asdwr2fqw543eqwe82sqwe34dfgqwe</td>
+                      </tr>
+
+                      <tr>
+                        <th scope="row">만료일</th>
+                        <td>2026.03.03</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="form-section mb20">
+                  <div class="api-select-panel">
+                    <div class="api-select-head">
+                      <p class="api-select-title">
+                        연결된 API
+                        <span class="api-select-count">(3개)</span>
+                      </p>
+                    </div>
+
+                    <ul class="api-select-list is-readonly">
+                      <li class="api-select-item">
+                        <div class="api-select-content">
+                          <strong class="api-name">anseunghyun</strong>
+                          <span class="api-path">/api/v1/anseunghyun</span>
+                        </div>
+
+                        <span class="api-status-chip is-deployed">배포됨</span>
+                      </li>
+
+                      <li class="api-select-item">
+                        <div class="api-select-content">
+                          <strong class="api-name">wise API</strong>
+                          <span class="api-path">/api/v1/wise</span>
+                        </div>
+
+                        <span class="api-status-chip is-pending">미배포</span>
+                      </li>
+
+                      <li class="api-select-item">
+                        <div class="api-select-content">
+                          <strong class="api-name">konan API</strong>
+                          <span class="api-path">/api/v1/konan</span>
+                        </div>
+
+                        <span class="api-status-chip is-pending">미배포</span>
+                      </li>
+                    </ul>
+
+                    <p class="help-text">- 배포된 API에 대해서만 api_mp_bas 라우팅 정보가 생성됩니다.</p>
+                  </div>
+                </div>
+
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-key-name">키 이름<span class="is-required">*</span></label>
+                      <input type="text" id="api-key-name" class="form-input" placeholder="키 이름을 입력해주세요" required>
+                      <p class="help-text">- 이 이름은 중복될 수 없습니다.</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">승인</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/datepicker.js"></script>
+
+</body>
+</html>

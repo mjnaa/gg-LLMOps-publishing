@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">API 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">새 API 등록</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="새 API 등록 폼">
+
+              <div class="form-layout">
+                <!-- 기본 정보 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-project">프로젝트<span class="is-required">*</span></label>
+                      <select class="form-select" id="api-create-project" required>
+                        <option value="" selected disabled hidden>프로젝트를 선택해주세요</option>
+                        <option value="op1">프로젝트 1</option>
+                        <option value="op2">프로젝트 2</option>
+                      </select>
+                    </div>                    
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-project-id">프로젝트 ID</label>
+                      <input type="text" id="api-create-project-id" class="form-input" placeholder="" readonly>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-project-users">사용자(관리자, 참여자)</label>
+                      <input type="text" id="api-create-project-users" class="form-input" placeholder="" readonly>
+                    </div>
+                  </div>
+
+                </div>
+
+                <hr class="form-divider">
+
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-name">API 이름<span class="is-required">*</span></label>
+                      <input type="text" id="api-create-name" class="form-input" placeholder="예: 사용자 관리 API" required>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-id">API ID<span class="is-required">*</span></label>
+                      <div class="form-control">
+                        <input type="text" id="api-create-id" class="form-input" placeholder="예: api-user-01" required>
+                        <button type="button" class="field-action btn-outline-gray-s">중복확인</button>
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-endpoint">Endpoint<span class="is-required">*</span></label>
+                      <div class="form-control">
+                        <input type="text" id="api-create-endpoint" class="form-input" placeholder="예: /api/v1/users" required>
+                        <button type="button" class="field-action btn-outline-gray-s">중복확인</button>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-create-desc">API 설명</label>
+                      <div class="textarea-wrap">
+                        <textarea id="api-create-desc" class="form-textarea" placeholder="API의 기능과 용도를 설명해주세요"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">생성</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+</body>
+</html>

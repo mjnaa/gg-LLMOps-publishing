@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">이미지 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">이미지 등록</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="이미지 등록 폼">
+
+              <div class="form-layout">
+                <!-- 기본 정보 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="image-id">이미지 ID<span class="is-required">*</span></label>
+                      <div class="form-control">
+                        <input type="text" id="image-id" class="form-input" placeholder="예: kai_gg_id" required>
+                        <button type="button" class="field-action btn-outline-gray-s">중복확인</button>
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="image-name">이미지명<span class="is-required">*</span></label>
+                      <input type="text" id="image-name" class="form-input" placeholder="예: 믿음 2.0 Pro 학습" required>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="image-release-date">이미지 출시일<span class="is-required">*</span></label>
+                        <div class="date-field">
+                          <input type="text" id="image-release-date" placeholder="YYYY.MM.DD" required>
+                          <button type="button" class="date-field-icon">
+                            <span class="icon20 icon--calendar icon--basic"></span>
+                          </button>
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="image-summary">이미지 설명(요약)</label>
+                      <input type="text" id="image-summary" class="form-input" placeholder="예: vLLM기반의 추론 환경">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="image-type">종류</label>
+                      <select class="form-select" id="image-type">
+                        <option value="op1" selected>추론</option>
+                        <option value="op2">학습</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="image-size">이미지 크기</label>
+                      <input type="text" id="image-size" class="form-input" placeholder="예: 80G">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="image-icon-file">이미지 아이콘</label>
+
+                      <!-- 파일 업로더 래퍼 -->
+                      <div class="form-file" data-file-uploader>
+                        <!-- 드롭존-->
+                        <label class="form-file-drop" for="image-icon-file">
+                          <input type="file" id="image-icon-file" class="form-file-input" data-form-file-input>
+
+                          <div class="form-file-inner">
+                            <p class="form-file-title">이미지 아이콘 업로드</p>
+                            <p class="form-file-desc">드래그 혹은 클릭하여 업로드 해주세요.</p>
+                          </div>
+                        </label>
+
+                        <!-- 파일 선택됨 -->
+                        <div class="form-file-item" data-form-file-item>
+                          <span class="form-file-icon" aria-hidden="true">
+                            <span class="icon24 icon--docs icon--basic"></span>
+                          </span>
+
+                          <div class="form-file-info">
+                            <p class="form-file-name" data-form-file-name></p>
+                            <p class="form-file-size" data-form-file-size></p>
+                          </div>
+
+                          <button type="button" class="form-file-remove" aria-label="첨부 파일 삭제" data-form-file-remove>
+                            <span class="icon22 icon--close icon--basic"></span>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <hr class="form-divider">
+
+                <!-- 고급 설정 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="registry-host">Container Registry host</label>
+                      <input type="text" id="registry-host" class="form-input" placeholder="예: 192.0.0.01:8080">
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="registry-tag">Container Registry tag</label>
+                      <input type="text" id="registry-tag" class="form-input" placeholder="예: latest">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="registry-project">Container Registry project</label>
+                      <input type="text" id="registry-project" class="form-input" placeholder="예: bai">
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" for="image-tag">Image tag</label>
+                      <input type="text" id="image-tag" class="form-input" placeholder="예: midm-pro-2.0">
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">등록</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/datepicker.js"></script>
+  <script src="../assets/js/file-uploader.js"></script>
+
+</body>
+</html>
