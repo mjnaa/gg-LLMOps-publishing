@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">평가 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--wide">
+
+          <!-- 상단 툴바 -->
+          <div class="page-toolbar">
+            <!-- 좌측 -->
+            <div class="toolbar-left">
+              <div class="form-search">
+                <span class="form-search-icon" aria-hidden="true"></span>
+                <input type="search" placeholder="검색어를 입력해주세요">
+              </div>
+              <select class="form-select">
+                <option value="" selected disabled hidden>평가 대상</option>
+                <option value="op1">전체</option>
+              </select>
+            </div>
+
+            <!-- 우측 -->
+            <div class="toolbar-right">
+              <!-- 액션 버튼 -->
+              <button type="button" class="btn-solid-primary-l">
+                <span class="icon16 icon--add icon--inverse"></span>
+                평가 생성
+              </button>
+            </div>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <div class="table-grid">
+
+              <div class="table-panel table-panel--scroll">
+                <table class="data-table data-table--list">
+                  <caption class="visually-hidden">평가 관리 목록</caption>
+                  <colgroup>
+                    <col style="width: 70px;">
+                    <col>
+                  </colgroup>
+
+                  <thead>
+                    <tr>
+                      <th scope="col" class="is-center">번호</th>
+                      <th scope="col">평가 제목</th>
+                      <th scope="col">평가 유형</th>
+                      <th scope="col">평가 대상</th>
+                      <th scope="col">진행 상태</th>
+                      <th scope="col">평가 지표</th>
+                      <th scope="col">생성일자</th>
+                    </tr>
+                  </thead>
+
+                  <tbody>
+                    <tr>
+                      <td class="is-center">17</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--deploying">진행중</span>
+                      </td>
+                      <td>-</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+
+                    <tr>
+                      <td class="is-center">16</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--deploying">진행중</span>
+                      </td>
+                      <td>-</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">15</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">14</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">13</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">12</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">11</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">10</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">9</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+                    
+                    <tr>
+                      <td class="is-center">8</td>
+                      <td>
+                        <a href="#" class="table-link">Wise - 법률 행정 평가_v10</a>
+                      </td>
+                      <td>모델</td>
+                      <td>WISE LLM</td>
+                      <td>
+                        <span class="status-chip status-chip--completed">완료</span>
+                      </td>
+                      <td>97.6</td>
+                      <td>2025.08.27 12:11:23</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- 페이지네이션 -->
+              <div class="table-footer">
+                <div class="table-footer-left">
+                  <p class="table-count">
+                    총 <strong>17</strong>개 중 <strong>1</strong>-<strong>10</strong> 표시
+                  </p>
+
+                  <div class="table-page-size">
+                    <label class="visually-hidden" for="page-size">페이지당 개수</label>
+                    <select id="page-size" class="form-select-s">
+                      <option value="10" selected>10</option>
+                      <option value="30">30</option>
+                      <option value="50">50</option>
+                    </select>
+                    <span class="table-page-size-text">개씩 보기</span>
+                  </div>
+                </div>
+
+                <nav class="pagination" aria-label="페이지 이동">
+                  <button type="button" class="btn-pagination btn-pagination--left" disabled aria-disabled="true">
+                    <span class="icon16 icon--arrow-left2 icon--basic"></span>
+                    Prev
+                  </button>
+
+
+                  <p class="pagination-list">
+                    <span>1</span>/<span>2</span>
+                  </p>
+
+                  <button type="button" class="btn-pagination btn-pagination--right">
+                    Next
+                    <span class="icon16 icon--arrow-right2 icon--basic"></span>
+                  </button>
+                </nav>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">모델 학습 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">새 모델 학습</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="새 모델 학습 폼">
+
+              <div class="form-layout">
+                <!-- 스텝퍼 -->
+                <div class="stepper" aria-label="모델 학습 단계">
+                  <ol class="stepper-list">
+                    <li class="stepper-item is-complete">
+                      <span class="stepper-circle">
+                        <span class="icon16 icon--check icon--inverse"></span>
+                      </span>
+                      <span class="stepper-label">정보 입력</span>
+                    </li>
+
+                    <li class="stepper-item is-complete">
+                      <span class="stepper-circle">
+                        <span class="icon16 icon--check icon--inverse"></span>
+                      </span>
+                      <span class="stepper-label">데이터 선택</span>
+                    </li>
+
+                    <li class="stepper-item is-current">
+                      <span class="stepper-circle">3</span>
+                      <span class="stepper-label">매개변수 설정</span>
+                    </li>
+
+                    <li class="stepper-item">
+                      <span class="stepper-circle">4</span>
+                      <span class="stepper-label">자원 설정</span>
+                    </li>
+
+                    <li class="stepper-item">
+                      <span class="stepper-circle">5</span>
+                      <span class="stepper-label">요약</span>
+                    </li>
+                  </ol> 
+                </div>
+
+                <!-- 매개변수 설정 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="train-early-stop-flag">Early stopping flag</label>
+                      <select class="form-select" id="train-early-stop-flag">
+                        <option value="" selected disabled hidden>선택해주세요</option>
+                        <option value="op1">옵션 1</option>
+                        <option value="op2">옵션 2</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="train-fp16-hook">FP16 optimizer hook</label>
+                      <select class="form-select" id="train-fp16-hook">
+                        <option value="" selected disabled hidden>선택해주세요</option>
+                        <option value="op1">옵션 1</option>
+                        <option value="op2">옵션 2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="train-lora-alpha">LoRA alpha</label>
+                      <select class="form-select" id="train-lora-alpha">
+                        <option value="" selected disabled hidden>선택해주세요</option>
+                        <option value="op1">옵션 1</option>
+                        <option value="op2">옵션 2</option>
+                      </select>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="train-lora-r">LoRA r</label>
+                      <select class="form-select" id="train-lora-r">
+                        <option value="" selected disabled hidden>선택해주세요</option>
+                        <option value="op1">옵션 1</option>
+                        <option value="op2">옵션 2</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="train-batch-num">Batch size</label>
+                      
+                      <div class="form-range-field">
+                        <input type="number" id="train-batch-num" class="form-input" min="1" max="20" step="1" value="8">
+                        <input type="range" id="train-batch-range" class="form-range" min="1" max="20" step="1" value="8">
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="train-early-patience-num">Early stopping patience</label>
+                      
+                      <div class="form-range-field">
+                        <input type="number" id="train-early-patience-num" class="form-input" min="1" max="20" step="1" value="3">
+                        <input type="range" id="train-early-patience-range" class="form-range" min="1" max="20" step="1" value="3">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="train-lr-num">Learning rate</label>
+                      
+                      <div class="form-range-field">
+                        <input type="number" id="train-lr-num" class="form-input" min="0" max="1" step="0.000001" value="0.000010">
+                        <input type="range" id="train-lr-range" class="form-range" min="0" max="1" step="0.000001" value="0.000010">
+                      </div>
+                    </div>
+
+                    <div class="form-field">
+                      <label class="form-label" for="train-lora-dropout-num">LoRA dropout</label>
+                      
+                      <div class="form-range-field">
+                        <input type="number" id="train-lora-dropout-num" class="form-input" min="0" max="1" step="0.1" value="0.1">
+                        <input type="range" id="train-lora-dropout-range" class="form-range" min="0" max="1" step="0.1" value="0.1">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="train-epochs-num">Training epochs</label>
+                      
+                      <div class="form-range-field">
+                        <input type="number" id="train-epochs-num" class="form-input" min="0" max="5" step="1" value="1">
+                        <input type="range" id="train-epochs-range" class="form-range" min="0" max="5" step="1" value="1">
+                      </div>
+                    </div>
+                    
+                    <div class="form-field">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field form-field--horizontal">
+                      <label class="form-label" id="train-lora-target-label">LoRA target modules</label>
+                      <div class="form-checkbox-wrap" role="group" aria-labelledby="train-lora-target-label">
+                        <label class="form-checkbox-label" for="train-lora-target-ca">
+                          <input type="checkbox" id="train-lora-target-ca" class="form-checkbox">CA
+                        </label>
+                        <label class="form-checkbox-label" for="train-lora-target-cp">
+                          <input type="checkbox" id="train-lora-target-cp" class="form-checkbox">CP
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                    <button type="button" class="btn-outline-gray-l">이전</button>
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">다음</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/range-fill.js"></script>
+  <script src="../assets/js/range-control.js"></script>
+
+</body>
+</html>

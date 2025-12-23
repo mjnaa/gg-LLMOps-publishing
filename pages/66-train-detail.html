@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">모델 학습 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">학습된 모델 상세</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <div class="tab-layout">
+              <div class="tab-filter" role="tablist" aria-label="학습된 모델 상세 탭">
+                <button type="button" class="tab-btn is-active" role="tab" id="tab-btn-basic" data-target="tab-panel-basic" aria-controls="tab-panel-basic" aria-selected="true">
+                  기본 정보
+                </button>
+
+                <button type="button" class="tab-btn" role="tab" id="tab-btn-loss" data-target="tab-panel-loss" aria-controls="tab-panel-loss" aria-selected="false">
+                  Loss 그래프
+                </button>
+
+                <button type="button" class="tab-btn" role="tab" id="tab-btn-gpu" data-target="tab-panel-gpu" aria-controls="tab-panel-gpu" aria-selected="false">
+                  GPU 모니터링
+                </button>
+              </div>
+
+              <div class="tab-panels">
+                <!-- 기본 정보 -->
+                <div class="tab-panel" id="tab-panel-basic" role="tabpanel" aria-labelledby="tab-btn-basic">
+                  <div class="panel">
+                    <!-- 헤드 -->
+                    <div class="panel-head">
+                      <h6 class="panel-title">학습 진행 상황</h6>
+
+                      <div class="panel-meta">
+                        <button type="button" class="panel-meta-icon">
+                          <span class="icon18 icon--cached icon--basic"></span>
+                        </button>
+                        <span class="panel-meta-text">최근 갱신 : 20:26:12</span>
+                      </div>
+                    </div>
+
+                    <!-- 요약 바 -->
+                    <div class="stat-bar" aria-label="학습 요약">
+                      <div class="stat-item">
+                        <span class="icon20 icon--time icon--basic"></span>
+                        <span class="stat-label">학습 소요 시간</span>
+                        <strong class="stat-value">20:24:55</strong>
+                      </div>
+                    </div>
+
+                    <!-- 타임라인 -->
+                    <ol class="timeline" aria-label="학습 이벤트 타임라인">
+                      <li class="timeline-item">
+                        <div class="timeline-time">2025.08.27 10:25:44</div>
+                        <div class="timeline-card">
+                          <span class="status-chip status-chip--failed">학습 취소</span>
+                          <p class="timeline-desc">학습 취소가 완료되었습니다.</p>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-time">2025.08.27 10:25:44</div>
+                        <div class="timeline-card">
+                          <span class="status-chip status-chip--failed">학습 취소</span>
+                          <p class="timeline-desc">학습 취소를 진행합니다.</p>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-time">2025.08.26 17:27:05</div>
+                        <div class="timeline-card">
+                          <span class="status-chip status-chip--paused">대기중</span>
+                          <p class="timeline-desc">CPU 리소스 할당 대기중입니다.</p>
+                        </div>
+                      </li>
+
+                      <li class="timeline-item">
+                        <div class="timeline-time">2025.08.26 17:27:04</div>
+                        <div class="timeline-card">
+                          <span class="status-chip status-chip--requested">학습 요청</span>
+                          <p class="timeline-desc">학습 요청이 되어 작업 대기 중입니다.</p>
+                        </div>
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+
+                <!-- Loss 그래프 -->
+                <div class="tab-panel" id="tab-panel-loss" role="tabpanel" aria-labelledby="tab-btn-loss" hidden>
+                  <div class="panel">
+                    <div class="panel-head">
+                      <h6 class="panel-title">Loss 그래프 영역</h6>
+                    </div>
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="chart-box" aria-label="Loss 그래프 영역"></div>
+                  </div>
+                </div>
+
+                <!-- GPU 모니터링 -->
+                <div class="tab-panel" id="tab-panel-gpu" role="tabpanel" aria-labelledby="tab-btn-gpu" hidden>
+                  <div class="panel">
+                    <div class="panel-head">
+                      <h6 class="panel-title">GPU 모니터링 영역</h6>
+                    </div>
+
+                    <!-- 콘텐츠 영역 -->
+                    <div class="chart-box" aria-label="GPU 모니터링 영역"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/tab-bar.js"></script>
+
+</body>
+</html>

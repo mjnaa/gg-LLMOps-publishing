@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">모델 학습 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">새 모델 학습</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="새 모델 학습 폼">
+
+              <div class="form-layout">
+                <!-- 스텝퍼 -->
+                <div class="stepper" aria-label="모델 학습 단계">
+                  <ol class="stepper-list">
+                    <li class="stepper-item is-complete">
+                      <span class="stepper-circle">
+                        <span class="icon16 icon--check icon--inverse"></span>
+                      </span>
+                      <span class="stepper-label">정보 입력</span>
+                    </li>
+
+                    <li class="stepper-item is-current">
+                      <span class="stepper-circle">2</span>
+                      <span class="stepper-label">데이터 선택</span>
+                    </li>
+
+                    <li class="stepper-item">
+                      <span class="stepper-circle">3</span>
+                      <span class="stepper-label">매개변수 설정</span>
+                    </li>
+
+                    <li class="stepper-item">
+                      <span class="stepper-circle">4</span>
+                      <span class="stepper-label">자원 설정</span>
+                    </li>
+
+                    <li class="stepper-item">
+                      <span class="stepper-circle">5</span>
+                      <span class="stepper-label">요약</span>
+                    </li>
+                  </ol> 
+                </div>
+
+                <!-- 데이터 선택 -->
+                <div class="form-section">
+                  
+                  <div class="subpage-toolbar">
+                    <div class="toolbar-left">
+                      <!-- 서치바 -->
+                      <div class="form-search">
+                        <span class="form-search-icon" aria-hidden="true"></span>
+                        <input type="search" placeholder="파일명, 데이터셋 ID, 데이터셋 이름을 입력해주세요">
+                      </div>
+                    </div>
+
+                    <div class="toolbar-right">
+                      <!-- 액션 버튼 -->
+                      <button type="button" class="btn-outline-gray-m">
+                        학습데이터 등록
+                      </button>
+                      <button type="button" class="btn-outline-gray-m">
+                        학습데이터 메뉴얼
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="table-grid">
+                    <!-- 데이터 선택 목록 -->
+                    <div class="table-panel table-panel--scroll">
+                      <table class="data-table data-table--list">
+                        <caption class="visually-hidden">데이터 선택 목록</caption>
+                        <colgroup>
+                          <col style="width: 50px;">
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col>
+                          <col style="width: 120px;">
+                        </colgroup>
+
+                        <thead>
+                          <tr>
+                            <th scope="col" class="is-center"></th>
+                            <th scope="col">파일명</th>
+                            <th scope="col">데이터셋 ID</th>
+                            <th scope="col">크기</th>
+                            <th scope="col">설명</th>
+                            <th scope="col">데이터셋 이름</th>
+                            <th scope="col">등록일</th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <tr>
+                            <td class="is-center">
+                              <label class="form-radio-label">
+                                <input type="radio" id="train-data-1" name="train-data" class="form-radio" value="1"><span></span>
+                              </label>
+                            </td>
+                            <td>train.jsonl</td>
+                            <td>notsrct gt-test1</td>
+                            <td>91.5 6KB</td>
+                            <td>템블릿 데이터로 파일추가 테스트</td>
+                            <td>notsrct gt-test1</td>
+                            <td>2025.08.26</td>
+                          </tr>
+
+                          <tr>
+                            <td class="is-center">
+                              <label class="form-radio-label">
+                                <input type="radio" id="train-data-2" name="train-data" class="form-radio" value="2"><span></span>
+                              </label>
+                            </td>
+                            <td>train.jsonl</td>
+                            <td>notsrct gt-test1</td>
+                            <td>91.5 6KB</td>
+                            <td>템블릿 데이터로 파일추가 테스트</td>
+                            <td>notsrct gt-test1</td>
+                            <td>2025.08.26</td>
+                          </tr>
+                          
+                          <tr>
+                            <td class="is-center">
+                              <label class="form-radio-label">
+                                <input type="radio" id="train-data-3" name="train-data" class="form-radio" value="3"><span></span>
+                              </label>
+                            </td>
+                            <td>train.jsonl</td>
+                            <td>notsrct gt-test1</td>
+                            <td>91.5 6KB</td>
+                            <td>템블릿 데이터로 파일추가 테스트</td>
+                            <td>notsrct gt-test1</td>
+                            <td>2025.08.26</td>
+                          </tr>
+
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- 페이지네이션 -->
+                    <div class="table-footer">
+                      <div class="table-footer-left">
+                        <p class="table-count">
+                          총 <strong>3</strong>개 중 <strong>1</strong>-<strong>3</strong> 표시
+                        </p>
+
+                        <div class="table-page-size">
+                          <label class="visually-hidden" for="page-size">페이지당 개수</label>
+                          <select id="page-size" class="form-select-s">
+                            <option value="5" selected>5</option>
+                            <option value="10">10</option>
+                            <option value="20">20</option>
+                          </select>
+                          <span class="table-page-size-text">개씩 보기</span>
+                        </div>
+                      </div>
+
+                      <nav class="pagination" aria-label="페이지 이동">
+                        <button type="button" class="btn-pagination btn-pagination--left" disabled aria-disabled="true">
+                          <span class="icon16 icon--arrow-left2 icon--basic"></span>
+                          Prev
+                        </button>
+
+
+                        <p class="pagination-list">
+                          <span>1</span>/<span>1</span>
+                        </p>
+
+                        <button type="button" class="btn-pagination btn-pagination--right" disabled aria-disabled="true">
+                          Next
+                          <span class="icon16 icon--arrow-right2 icon--basic"></span>
+                        </button>
+                      </nav>
+                    </div>
+
+                  </div>
+
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                    <button type="button" class="btn-outline-gray-l">이전</button>
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">다음</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+</body>
+</html>

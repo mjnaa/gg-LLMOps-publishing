@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">평가 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">평가 결과 조회</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="평가 결과 조회 폼">
+
+              <div class="form-layout">
+                
+                <p class="table-label">평가 정보</p>
+                <div class="info-table mb20">
+                  <table class="kv-table">
+                    <caption class="visually-hidden">평가 정보</caption>
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col>
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">평가 제목</th>
+                        <td>법률 정보에 대한 wise 모델 평가</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">평가 설명</th>
+                        <td>새로운 모델과의 연동, 평가 평가 파일은 2025년 신규 법류 정보 파일 대상</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="table-label">평가 대상</p>
+                <div class="info-table mb20">
+                  <table class="kv-table">
+                    <caption class="visually-hidden">평가 대상</caption>
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col>
+                      <col style="width: 160px;">
+                      <col>
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">배포 ID</th>
+                        <td>devbuddy-guide</td>
+                        <th scope="row">배포 이름</th>
+                        <td>devbuddy-guide</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">학습 모델</th>
+                        <td>base-gpt-4o-mini</td>
+                        <th scope="row">LLM ID</th>
+                        <td>base-gpt-4o-mini</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">배포 완료 일시</th>
+                        <td colspan="3">2025-11-11 15:48</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <p class="table-label">평가 결과</p>
+                <div class="info-table mb20">
+                  <table class="kv-table">
+                    <caption class="visually-hidden">평가 결과</caption>
+                    <colgroup>
+                      <col style="width: 160px;">
+                      <col>
+                      <col style="width: 160px;">
+                      <col>
+                    </colgroup>
+
+                    <tbody>
+                      <tr>
+                        <th scope="row">소요 시간</th>
+                        <td>7분</td>
+                        <th scope="row">전체 건수</th>
+                        <td>45</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">평가 결과</th>
+                        <td>98.7</td>
+                        <th scope="row">97% 이상</th>
+                        <td>41</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">평가 요청자</th>
+                        <td>admin1</td>
+                        <th scope="row">95% 이상</th>
+                        <td>43</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">평가 일자</th>
+                        <td>2025.12.05 09:12:23</td>
+                        <th scope="row">70% 이상</th>
+                        <td>2</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="eval-file">평가 파일 업로드</label>
+
+                      <!-- 파일 업로더 래퍼 -->
+                      <div class="form-file is-filled" data-file-uploader>
+                        <!-- 드롭존-->
+                        <label class="form-file-drop" for="eval-file">
+                          <input type="file" id="eval-file" class="form-file-input" data-form-file-input disabled>
+
+                          <div class="form-file-inner">
+                            <p class="form-file-title">평가 파일 업로드</p>
+                            <p class="form-file-desc">드래그 혹은 클릭하여 업로드 해주세요.</p>
+                          </div>
+                        </label>
+
+                        <!-- 파일 선택됨 -->
+                        <div class="form-file-item" data-form-file-item>
+                          <span class="form-file-icon" aria-hidden="true">
+                            <span class="icon24 icon--docs icon--basic"></span>
+                          </span>
+
+                          <div class="form-file-info">
+                            <p class="form-file-name" data-form-file-name>2025년 신규 법률 대상 평가 파일.xlsx</p>
+                            <p class="form-file-size" data-form-file-size>430KB</p>
+                          </div>
+
+                          <button type="button" class="form-file-remove" aria-label="첨부 파일 삭제" data-form-file-remove disabled>
+                            <span class="icon22 icon--close icon--basic"></span>
+                          </button>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/file-uploader.js"></script>
+
+</body>
+</html>

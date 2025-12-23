@@ -131,7 +131,7 @@ SEMANTIC TOKENS
   --color-button-solid-primary: var(--c-gray-90);
   --color-button-solid-primary-hover: var(--c-gray-100);
   --color-button-solid-gray: var(--c-gray-5);
-  --color-button-solid-gray-hover: var(--c-gray-5);
+  --color-button-solid-gray-hover: var(--c-gray-10);
   --color-button-outline-gray: var(--c-gray-10);
   --color-button-outline-gray-bg: var(--c-gray-0);
   --color-button-outline-gray-hover: var(--c-gray-5);

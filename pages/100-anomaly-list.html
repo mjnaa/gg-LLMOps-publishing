@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">이상 탐지 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--wide">
+
+          <!-- 상단 툴바 -->
+          <div class="page-toolbar">
+            <!-- 좌측 -->
+            <div class="toolbar-left">
+              <div class="form-search">
+                <span class="form-search-icon" aria-hidden="true"></span>
+                <input type="search" placeholder="검색어를 입력해주세요">
+              </div>
+              <select class="form-select">
+                <option value="" selected disabled hidden>상태</option>
+                <option value="active">활성</option>
+                <option value="inactive">비활성</option>
+              </select>
+            </div>
+
+            <!-- 우측 -->
+            <div class="toolbar-right">
+              <!-- 액션 버튼 -->
+            </div>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="이상 탐지 일괄 처리">
+
+              <div class="table-grid">
+
+                <div class="table-panel table-panel--scroll">
+                  <table class="data-table data-table--list">
+                    <caption class="visually-hidden">이상 탐지 목록</caption>
+                    <colgroup>
+                      <col style="width: 50px;">
+                      <col>
+                    </colgroup>
+
+                    <thead>
+                      <tr>
+                        <th scope="col" class="is-center"></th>
+                        <th scope="col">질의 시간</th>
+                        <th scope="col">모델명</th>
+                        <th scope="col">서비스명</th>
+                        <th scope="col">처리 상태</th>
+                        <th scope="col">소요시간</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-17">
+                            <input type="checkbox" id="row-check-17" class="form-checkbox">
+                            <span class="visually-hidden">17번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--deploying">처리중</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-16">
+                            <input type="checkbox" id="row-check-16" class="form-checkbox">
+                            <span class="visually-hidden">16번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--deploying">처리중</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-15">
+                            <input type="checkbox" id="row-check-15" class="form-checkbox">
+                            <span class="visually-hidden">15번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--deploying">처리중</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-14">
+                            <input type="checkbox" id="row-check-14" class="form-checkbox">
+                            <span class="visually-hidden">14번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--deploying">처리중</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-13">
+                            <input type="checkbox" id="row-check-13" class="form-checkbox">
+                            <span class="visually-hidden">13번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-12">
+                            <input type="checkbox" id="row-check-12" class="form-checkbox">
+                            <span class="visually-hidden">12번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-11">
+                            <input type="checkbox" id="row-check-11" class="form-checkbox">
+                            <span class="visually-hidden">11번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-10">
+                            <input type="checkbox" id="row-check-10" class="form-checkbox">
+                            <span class="visually-hidden">10번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-9">
+                            <input type="checkbox" id="row-check-9" class="form-checkbox">
+                            <span class="visually-hidden">9번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+                      
+                      <tr>
+                        <td class="chart-box">
+                          <label class="form-checkbox-label" for="row-check-8">
+                            <input type="checkbox" id="row-check-8" class="form-checkbox">
+                            <span class="visually-hidden">8번 항목</span>
+                          </label>
+                        </td>
+                        <td>
+                          <a href="#" class="table-link">2025.12.03 14:22:23</a>
+                        </td>
+                        <td>WISE-LLM</td>
+                        <td>AI 법률</td>
+                        <td>
+                          <span class="status-chip status-chip--completed">처리완료</span>
+                        </td>
+                        <td>12분 20초</td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- 페이지네이션 -->
+                <div class="table-footer">
+                  <div class="table-footer-left">
+                    <p class="table-count">
+                      총 <strong>17</strong>개 중 <strong>1</strong>-<strong>10</strong> 표시
+                    </p>
+
+                    <div class="table-page-size">
+                      <label class="visually-hidden" for="page-size">페이지당 개수</label>
+                      <select id="page-size" class="form-select-s">
+                        <option value="10" selected>10</option>
+                        <option value="30">30</option>
+                        <option value="50">50</option>
+                      </select>
+                      <span class="table-page-size-text">개씩 보기</span>
+                    </div>
+                  </div>
+
+                  <nav class="pagination" aria-label="페이지 이동">
+                    <button type="button" class="btn-pagination btn-pagination--left" disabled aria-disabled="true">
+                      <span class="icon16 icon--arrow-left2 icon--basic"></span>
+                      Prev
+                    </button>
+
+
+                    <p class="pagination-list">
+                      <span>1</span>/<span>2</span>
+                    </p>
+
+                    <button type="button" class="btn-pagination btn-pagination--right">
+                      Next
+                      <span class="icon16 icon--arrow-right2 icon--basic"></span>
+                    </button>
+                  </nav>
+                </div>
+
+                <!-- 일괄 처리 영역 -->
+                <div class="bulk-action">
+                  <div class="bulk-action-left">
+                    <label class="form-label" for="bulk-status">일괄 처리</label>
+                    <select class="form-select" id="bulk-status">
+                      <option value="" selected disabled hidden>처리 상태를 선택해주세요</option>
+                      <option value="op1">처리 완료</option>
+                      <option value="op2">처리 중</option>
+                      <option value="op3">처리 불가</option>
+                    </select>
+
+                    <label class="visually-hidden" for="bulk-note">처리 의견</label>
+                    <input type="text" id="bulk-note" class="form-input" placeholder="처리 의견을 입력해주세요">
+                  </div>
+
+                  <div class="bulk-action-right">
+                    <button type="submit" class="btn-solid-primary-l">처리</button>
+                  </div>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+
+</body>
+</html>

@@ -125,13 +125,13 @@ h3 {
 }
 h4 {
   font-size: 2rem;   /* 20px */
-  font-weight: 600;
+  font-weight: 500;
   line-height: 150%;
   letter-spacing: 0;
 }
 h5 {
   font-size: 1.8rem; /* 18px */
-  font-weight: 600;
+  font-weight: 500;
   line-height: 150%;
   letter-spacing: 0;
 }

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+  <div class="layout">
+
+    <!------ 좌측 네비게이션 ------>
+    <aside class="layout-nav" aria-label="좌측 네비게이션">
+      
+      <!------ 상단 고정 영역 ------>
+        <div class="nav-head">
+          <a class="logo" href="#" aria-label="홈으로">
+            <img src="../assets/img/logo.png" alt="LLMOps"/>
+          </a>
+        </div>
+
+        <!------ 메뉴 영역  ------>
+        <div class="nav-body" aria-label="메뉴 목록">
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dashboard icon--basic icon"></span>
+                <span class="nav-text">대시보드</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--model icon--basic icon"></span>
+                <span class="nav-text">모델 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--image icon--basic icon"></span>
+                <span class="nav-text">이미지 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--project icon--basic icon"></span>
+                <span class="nav-text">프로젝트 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--deploy icon--basic icon"></span>
+                <span class="nav-text">모델 배포 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--training icon--basic icon"></span>
+                <span class="nav-text">모델 학습 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--api icon--basic icon"></span>
+                <span class="nav-text">API 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--key icon--basic icon"></span>
+                <span class="nav-text">API 키 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--resource icon--basic icon"></span>
+                <span class="nav-text">자원 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--dev icon--basic icon"></span>
+                <span class="nav-text">개발 관리</span>
+              </a>
+            </li>
+            <li class="nav-item is-active">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--evaluation icon--basic icon"></span>
+                <span class="nav-text">평가 관리</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <span class="icon20 icon--anomaly icon--basic icon"></span>
+                <span class="nav-text">이상 탐지 관리</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        
+    </aside>
+
+
+    <!------ 메인 영역 ------>
+    <main class="layout-main">
+
+      <!------ 상단바 ------>
+      <header class="layout-header" aria-label="상단바">
+        <div class="header-title">
+          <h5 class="page-title">평가 관리</h5>
+        </div>
+
+        <div class="header-actions">
+          <button type="button" class="btn-outline-gray-s">로그아웃</button>
+        </div>
+      </header>
+        
+  
+      <!------ 본문 ------>
+      <section class="layout-body" aria-label="콘텐츠">
+
+        <div class="page page--narrow">
+
+          <!-- 상단 타이틀 -->
+          <div class="page-head">
+            <h5 class="page-title">평가 진행</h5>
+          </div>
+
+          <!-- 콘텐츠 -->
+          <div class="page-content">
+            <form class="form-panel" aria-label="평가 진행 폼">
+
+              <div class="form-layout">
+                <!-- 평가 진행 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="eval-title">평가 제목</label>
+                      <input type="text" id="eval-title" class="form-input" value="wise-법률 행정 평가_v10" disabled>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="eval-desc">평가 설명</label>
+                      <div class="textarea-wrap">
+                        <textarea id="eval-desc" class="form-textarea" disabled>새로운 모델과의 연동 평가, 평가 파일은 2025년 신규 법률 정보 파일 대상</textarea>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" id="eval-target-label">평가 대상</label>
+                      <!-- 평가 대상 선택 목록 -->
+                      <div class="table-panel table-panel--scroll" role="radiogroup" aria-labelledby="eval-target-label">
+                        <table class="data-table">
+                          <caption class="visually-hidden">평가 대상 선택 목록</caption>
+                          <colgroup>
+                            <col style="width: 50px;">
+                          </colgroup>
+
+                          <thead>
+                            <tr>
+                              <th scope="col" class="is-center"></th>
+                              <th scope="col">배포 ID</th>
+                              <th scope="col">배포 이름</th>
+                              <th scope="col">학습 모델</th>
+                              <th scope="col">LLM ID</th>
+                              <th scope="col">배포 완료 일시</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td class="is-center">
+                                <label class="form-radio-label" for="eval-target-1">
+                                  <input type="radio" id="eval-target-1" name="eval-target" class="form-radio" value="1" checked disabled><span></span>
+                                </label>
+                              </td>
+                              <td>devbuddy-guide</td>
+                              <td>devbuddy-guide</td>
+                              <td>base-gpt-4o-mini</td>
+                              <td>base-gpt-4o-mini</td>
+                              <td>2025-11-11 15:48</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label">평가 결과</label>
+                      <!-- 평가 결과 목록 -->
+                      <div class="table-panel table-panel--scroll">
+                        <table class="data-table">
+                          <caption class="visually-hidden">평가 결과 목록</caption>
+                          <colgroup>
+                            <col style="width: 50px;">
+                            <col style="width: 220px;">
+                          </colgroup>
+
+                          <thead>
+                            <tr>
+                              <th scope="col" class="is-center"></th>
+                              <th scope="col">평가자 질의/평가</th>
+                              <th scope="col">평가자 답변</th>
+                              <th scope="col">LLM 답변</th>
+                            </tr>
+                          </thead>
+
+                          <tbody>
+                            <tr>
+                              <td class="is-center">1</td>
+                              <td class="eval-question">
+                                <p class="question-text">경기도청 위치는</p>
+
+                                <div class="eval-score">
+                                  <label class="form-radio-label" for="score-1-99">
+                                    <input type="radio" id="score-1-99" name="score-1" class="form-radio"><span>99%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-1-97">
+                                    <input type="radio" id="score-1-97" name="score-1" class="form-radio"><span>97%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-1-95">
+                                    <input type="radio" id="score-1-95" name="score-1" class="form-radio"><span>95%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-1-70">
+                                    <input type="radio" id="score-1-70" name="score-1" class="form-radio"><span>70%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-1-50">
+                                    <input type="radio" id="score-1-50" name="score-1" class="form-radio"><span>50%</span>
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="eval-answer">
+                                <!-- 7줄 초과 시 말줄임(약 200자) -->
+                                <div class="eval-answer-text">
+                                경기도 수원시 영통구 도청로 30
+                                </div>
+                                <button type="button" class="eval-answer-more" hidden>+ 전체보기</button>
+                              </td>
+                              <td class="eval-answer">
+                                <!-- 7줄 초과 시 말줄임(약 200자) -->
+                                <div class="eval-answer-text">
+                                경기도 수원시 영통구 도청로 30
+                                </div>
+                                <button type="button" class="eval-answer-more" hidden>+ 전체보기</button>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td class="is-center">2</td>
+                              <td class="eval-question">
+                                <p class="question-text">학교급식법에서 수의 계약 허용 경우는</p>
+
+                                <div class="eval-score">
+                                  <label class="form-radio-label" for="score-2-99">
+                                    <input type="radio" id="score-2-99" name="score-2" class="form-radio"><span>99%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-2-97">
+                                    <input type="radio" id="score-2-97" name="score-2" class="form-radio"><span>97%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-2-95">
+                                    <input type="radio" id="score-2-95" name="score-2" class="form-radio"><span>95%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-2-70">
+                                    <input type="radio" id="score-2-70" name="score-2" class="form-radio"><span>70%</span>
+                                  </label>
+                                  <label class="form-radio-label" for="score-2-50">
+                                    <input type="radio" id="score-2-50" name="score-2" class="form-radio"><span>50%</span>
+                                  </label>
+                                </div>
+                              </td>
+                              <td class="eval-answer">
+                                <!-- 7줄 초과 시 말줄임(약 200자) -->
+                                <div class="eval-answer-text">
+                                  전문적인 기술을 요하는 경우나 천재지변과 같이 특수한 경우 또는 관련 법령에서 허하고 있는 경우에 한 해 수의 계약이 허용됨 
+                                </div>
+                                <button type="button" class="eval-answer-more" hidden>+ 전체보기</button>
+                              </td>
+                              <td class="eval-answer">
+                                <!-- 7줄 초과 시 말줄임(약 200자) -->
+                                <div class="eval-answer-text">
+                                  특수한 기술이나 전문성이 필요한 경우: 특정 업체나 개인의 전문성이 요구되는 경우. 긴급한 상황: 재난, 재해 등 긴급한 상황에서 신속한 계약이 필요한 경우. 공공의 이익: 공공의 이익을 위해 수의 계약이 불가피한 경우. 기타 법령에서 수의 계약을 허용하는 경우. 특정 업체나 개인의 전문성이 요구되는 경우. 긴급한 상황: 재난, 재해 등 긴급한 상황에서 신속한 계약이 필요한 경우.
+                                </div>
+                                <button type="button" class="eval-answer-more" hidden>+ 전체보기</button>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">평가 종료</button>
+                  </div>
+                </div>
+              
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+
+  </div>
+
+  <!-- JS -->
+  <script src="../assets/js/eval-answer-toggle.js"></script>
+
+</body>
+</html>

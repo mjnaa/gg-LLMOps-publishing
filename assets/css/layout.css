@@ -141,7 +141,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
 }
 .page-toolbar .form-select {
   min-width: clamp(100px, 30vw, 130px);
@@ -153,6 +153,12 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+.toolbar-left .page-greeting {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0;
 }
 .toolbar-right {
   display: flex;
@@ -183,6 +189,130 @@
   align-items: center;
   gap: 4px;
   margin: 0;
+}
+.subpage-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+
+/* ======= 대시보드 레이아웃 (dashboard) ======= */
+.dashboard {
+  display: grid;
+  grid-template-columns: 420px 1fr; /* 좌측 고정, 우측 유동 */
+  gap: 20px;
+  align-items: start;
+}
+.dashboard-col--right {
+  display: grid;
+  gap: 20px;
+}
+@media (max-width: 1100px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 패널 */
+.dashboard .panel {
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--color-background-basic);
+}
+.dashboard .panel-head {
+  margin: 0 0 8px 6px;
+}
+.dashboard .panel-title {
+  font-size: 1.5rem; 
+  line-height: 150%; 
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--color-text-subtle);
+}
+
+/* 좌측 자원 현황 */
+.dashboard .resource-panel {
+  display: grid;
+  gap: 20px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-basic);
+  background: var(--color-background-subtle);
+  padding: 24px;
+}
+.dashboard .resource-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.dashboard .resource-item {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+.dashboard .resource-divider {
+  height: 1px;
+  background: var(--color-border-basic);
+  opacity: 0.7;
+}
+
+/* 차트 컨테이너(자리만 확보) */
+.dashboard .chart-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 999px;
+  background: var(--color-background-muted);
+  position: relative;
+}
+
+/* 우측 통계 카드 */
+.dashboard .stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.dashboard .stat-card {
+  border-radius: 10px;
+  border: 1px solid var(--color-border-basic);
+  background: var(--color-background-subtle);
+  padding: 24px;
+  height: 256px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.dashboard .stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #EBEDEE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard .stat-name {
+  margin-top: auto;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+.dashboard .stat-value {
+  font-size: 2.2rem;
+  line-height: 150%;
+  letter-spacing: -0.24px;
+  font-weight: 600;
+  color: var(--color-text-basic);
+}
+@media (max-width: 1500px) {
+  .dashboard .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .dashboard .stat-card {
+    height: 180px;
+  }
 }
 
 
@@ -324,4 +454,51 @@
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+
+/* ======= 탭 레이아웃 (tab-layout) ======= */
+.tab-layout {
+  margin-top: 14px;
+  min-width: 260px;
+  border-radius: 10px;
+  border: 1px solid var(--color-border-basic);
+  background: var(--color-background-subtle);
+}
+.tab-layout  .panel {
+  overflow: hidden;
+}
+.tab-layout .panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 26px 14px 26px;
+}
+.tab-layout .panel-title {
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--color-text-basic);
+}
+.tab-layout .panel-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.4rem;
+  line-height: 150%;
+  letter-spacing: 0;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+.tab-layout .panel-meta-icon {
+  width: 18px;
+  height: 18px;
+}
+.tab-layout .chart-box {
+  padding: 0 26px;
+  margin: 0px 26px 30px 26px;
 }
