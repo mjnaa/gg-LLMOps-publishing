@@ -139,56 +139,106 @@
 
           <!-- 콘텐츠 -->
           <div class="page-content">
+            <form class="form-panel" aria-label="API 상세 폼">
 
-            <div class="form-layout">
-              <div class="info-table">
-                <table class="kv-table">
-                  <caption class="visually-hidden">API 상세 정보</caption>
-                  <colgroup>
-                    <col style="width: 160px;">
-                    <col>
-                    <col style="width: 160px;">
-                    <col>
-                  </colgroup>
+              <div class="form-layout">
+                <!-- 기본 정보 -->
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-project">프로젝트명</label>
+                      <select class="form-select" id="api-detail-project" disabled>
+                        <option value="op1" selected>일반행정 챗봇 서비스</option>
+                        <option value="op2">프로젝트 2</option>
+                      </select>
+                    </div>                    
+                  </div>
 
-                  <tbody>
-                    <tr>
-                      <th scope="row">배포 ID</th>
-                      <td>temp-deploy-id-01</td>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-project-id">프로젝트 ID</label>
+                      <input type="text" id="api-detail-project-id" class="form-input" value="normalWork_chatbot_V11" disabled>
+                    </div>
 
-                      <th scope="row">배포 이름</th>
-                      <td>temp-deploy-name-01</td>
-                    </tr>
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-project-users">관리자</label>
+                      <input type="text" id="api-detail-project-users" class="form-input" value="관리자1 (admin1)" disabled>
+                    </div>
+                  </div>
 
-                    <tr>
-                      <th scope="row">학습 모델</th>
-                      <td>wise</td>
+                </div>
 
-                      <th scope="row">LLM ID</th>
-                      <td>wise</td>
-                    </tr>
+                <hr class="form-divider">
 
-                    <tr>
-                      <th scope="row">인스턴스 개수</th>
-                      <td>1</td>
+                <div class="form-section">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-name">API 이름</label>
+                      <input type="text" id="api-detail-name" class="form-input" value="2026.03.03" disabled>
+                    </div>
 
-                      <th scope="row">배포 상태</th>
-                      <td>배포 승인</td>
-                    </tr>
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-usage">사용량</label>
+                      <input type="text" id="api-detail-usage" class="form-input" value="77회" disabled>
+                    </div>
+                  </div>
 
-                    <tr>
-                      <th scope="row">생성자</th>
-                      <td>유준용</td>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-id">API ID</label>
+                      <div class="form-control">
+                        <input type="text" id="api-detail-id" class="form-input" value="7855a1sd51f165af1265f5a15sf1" disabled>
+                      </div>
+                    </div>
 
-                      <th scope="row">배포 완료 날짜</th>
-                      <td>2025.11.10T13:10:35.786770</td>
-                    </tr>
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-endpoint">Endpoint</label>
+                      <div class="form-control">
+                        <input type="text" id="api-detail-endpoint" class="form-input" value="Api/chat/202601_v1" disabled>
+                        <button type="button" class="field-action btn-outline-gray-s">복사</button>
+                      </div>
+                    </div>
+                  </div>
 
-                  </tbody>
-                </table>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-model">배포 모델</label>
+                      <select class="form-select" id="api-detail-model" disabled>
+                        <option value="op1" selected>Midm_chat_v4.0</option>
+                        <option value="op2">배포 모델 2</option>
+                      </select>
+                    </div>                    
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" for="api-detail-desc">API 설명</label>
+                      <div class="textarea-wrap">
+                        <textarea id="api-detail-desc" class="form-textarea" disabled>새로운 모델과의 연동 평가
+평가 파일은 2025년 신규 법률 정보 파일 대상</textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 버튼 -->
+                <div class="form-actions">
+                  <div class="form-actions-left">
+                    <button type="button" class="btn-solid-danger-l">삭제</button>
+                    <!-- 생성 후 버튼 -->
+                    <!--<button type="button" class="btn-outline-gray-l">비활성화</button>-->
+                  </div>
+                  <div class="form-actions-right">
+                    <button type="button" class="btn-outline-gray-l">취소</button>
+                    <button type="submit" class="btn-solid-primary-l">생성</button>
+                    <!-- 생성 후 버튼 -->
+                    <!--<button type="submit" class="btn-solid-primary-l">수정</button>-->
+                  </div>
+                </div>
+              
               </div>
-            </div>
 
+            </form>
           </div>
 
         </div>

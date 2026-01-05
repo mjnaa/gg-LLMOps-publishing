@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>경기도 생성형 LLMOps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="경기도 생성형 LLMOps" />
+  <!-- style sheets -->
+  <link href="../assets/css/tokens.css" rel="stylesheet">
+  <link href="../assets/css/font.css" rel="stylesheet">
+  <link href="../assets/css/base.css" rel="stylesheet">
+  <link href="../assets/css/layout.css" rel="stylesheet">
+  <link href="../assets/css/components.css" rel="stylesheet">
+  <link href="../assets/css/mask_datauri.css" rel="stylesheet">
+  <!-- favicon -->
+  <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
+  
+</head>
+
+<body>
+    
+    <div style="padding:24px; display:flex; justify-content:center; gap:12px;">
+      <button class="btn-solid-primary-m" data-modal-target="#modal-1">학습데이터 등록</button>
+    </div>
+
+    <!-- 학습데이터 등록 -->
+    <div class="modal-basic" id="modal-1" role="dialog" aria-modal="true" aria-hidden="true" data-modal-backdrop-close="false" data-modal-esc="false" data-modal>
+      <div class="modal-panel" tabindex="-1" data-modal-panel>
+        <div class="modal-head">
+          <h5>새 학습데이터 등록</h5>
+          <button class="btn-aside-close btn-icon-normal-m" type="button" aria-label="모달 닫기" data-modal-close>
+            <span class="icon20 icon--close icon--basic"></span>
+          </button>
+        </div>
+
+        <form>
+          <div class="modal-body"> 
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="ds-id">데이터셋 ID<span class="is-required">*</span></label>
+                <input type="text" id="ds-id" class="form-input" placeholder="데이터셋 ID를 입력해주세요" required>
+              </div>
+            </div> 
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="ds-name">데이터셋 이름<span class="is-required">*</span></label>
+                <input type="text" id="ds-name" class="form-input" placeholder="데이터셋 이름을 입력해주세요" required>
+              </div>
+            </div> 
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="ds-owner">등록자</label>
+                <input type="text" id="ds-owner" class="form-input" value="Admin2" readonly>
+              </div>
+              <div class="form-field">
+                <label class="form-label" for="ds-created-at">등록일자</label>
+                <input type="text" id="ds-created-at" class="form-input" value="2025.09.01 12:23:33" readonly>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label" for="ds-desc">데이터셋 설명</label>
+                <div class="textarea-wrap">
+                  <textarea id="ds-desc" class="form-textarea" placeholder="파일 설명을 입력해주세요"></textarea>
+                </div>
+              </div>
+            </div> 
+
+            <div class="form-row">
+              <div class="form-field">
+                <label class="form-label">파일 업로드</label>
+
+                <!-- 파일 업로더 래퍼 -->
+                <div class="form-file" data-file-uploader>
+                  <!-- 드롭존-->
+                  <label class="form-file-drop" for="ds-file">
+                    <input type="file" id="ds-file" class="form-file-input" data-form-file-input>
+
+                    <div class="form-file-inner">
+                      <p class="form-file-title">파일 업로드</p>
+                      <p class="form-file-desc">드래그 혹은 클릭하여 업로드 해주세요</p>
+                    </div>
+                  </label>
+
+                  <!-- 파일 선택됨 -->
+                  <div class="form-file-item" data-form-file-item>
+                    <span class="form-file-icon" aria-hidden="true">
+                      <span class="icon24 icon--docs icon--basic"></span>
+                    </span>
+
+                    <div class="form-file-info">
+                      <p class="form-file-name" data-form-file-name></p>
+                      <p class="form-file-size" data-form-file-size></p>
+                    </div>
+
+                    <button type="button" class="form-file-remove" aria-label="첨부 파일 삭제" data-form-file-remove>
+                      <span class="icon22 icon--close icon--basic"></span>
+                    </button>
+                  </div>
+                </div>
+
+                <p class="caption-text mt5">- 학습 데이터는 확장자가 *.jsonl 또는 *.json 이어야 하고, 파일 본문 내 newline( ) 기호가 있으면 안되며, 데이터 저장은 마지막 사용일로부터 1년 동안 유효합니다.</p>
+                <p class="caption-text">- 파일명에 확장자로 오인될 수 있는 단어가 들어가면 안되며, 파일명에 문제가 있을 경우 모델 학습이 실패할 수 있습니다. 데이터의 최소 라인 수는 180줄입니다.</p>
+              </div>
+            </div> 
+
+          </div>
+
+          <div class="modal-foot">
+            <button type="button" class="btn-outline-gray-l" data-modal-close>취소</button>
+            <button type="submit" class="btn-solid-primary-l">생성</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+
+  <!-- JS -->
+  <script src="../assets/js/modal-popup.js"></script>
+  <script src="../assets/js/file-uploader.js"></script>
+
+</body>
+</html>

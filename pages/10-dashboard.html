@@ -133,7 +133,7 @@
         <div class="page page--wide">
 
           <!-- 상단 툴바 -->
-          <div class="page-toolbar">
+          <div class="page-toolbar dashboard-toolbar">
             <!-- 좌측 -->
             <div class="toolbar-left">
               <p class="page-greeting">홍길동님의 접속을 환영합니다.</p>
@@ -142,163 +142,287 @@
             <!-- 우측 -->
             <div class="toolbar-right">
               <select class="form-select">
-                <option value="" selected disabled hidden>상태</option>
-                <option value="active">활성</option>
-                <option value="inactive">비활성</option>
+                <option value="" selected disabled hidden>전체 프로젝트</option>
+                <option value="op1">프로젝트 1</option>
+                <option value="op2">프로젝트 2</option>
               </select>
+
+              <!-- 기간 선택 -->
+              <div class="toolbar-period">
+                <div class="segmented-control">
+                  <button type="button" class="segment-btn">시간</button>
+                  <button type="button" class="segment-btn">일</button>
+                  <button type="button" class="segment-btn is-active" aria-pressed="true">월</button>
+                </div>
+
+                <div class="toolbar-controls">
+                  <div class="dash-daterange">
+                    <div class="date-field">
+                      <input type="text" value="2025.12.23" aria-label="시작일">
+                      <button type="button" class="date-field-icon">
+                        <span class="icon20 icon--calendar icon--basic"></span>
+                      </button>
+                    </div>
+                    <span class="toolbar-date-sep">~</span>
+                    <div class="date-field">
+                      <input type="text" value="2025.12.23" aria-label="종료일">
+                      <button type="button" class="date-field-icon">
+                        <span class="icon20 icon--calendar icon--basic"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            
           </div>
 
           <!-- 콘텐츠 -->
           <div class="page-content">
             <div class="dashboard">
 
-              <!-- 좌측 컬럼 -->
-              <div class="dashboard-col dashboard-col--left">
-                <div class="panel">
-
-                  <div class="panel-head">
-                    <p class="panel-title">GPU 자원 현황</p>
+              <div class="dashboard-top">
+                <!-- 리소스 현황 -->
+                <div class="dashboard-card dashboard-resource">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">리소스 자원 현황</p>
                   </div>
 
-                  <div class="panel-body">
-                    <div class="resource-panel">
-                      <div class="resource-row">
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="GPU#1 사용률 차트"></div>
-                        </div>
-
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="GPU#2 사용률 차트"></div>
-                        </div>
+                  <div class="resource-grid">
+                    <div class="resource-group">
+                      <div class="resource-item">
+                        <!-- 차트 영역 (GPU) -->
+                        <div class="donut-placeholder"></div>
                       </div>
-
-                      <div class="resource-divider"></div>
-
-                      <div class="resource-row">
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="CPU#1 사용률 차트"></div>
-                        </div>
-
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="CPU#2 사용률 차트"></div>
-                        </div>
+                      <div class="resource-item">
+                        <!-- 차트 영역 (CPU) -->
+                        <div class="donut-placeholder"></div>
                       </div>
-
-                      <div class="resource-divider"></div>
-
-                      <div class="resource-row">
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="MEME#1 사용률 차트"></div>
-                        </div>
-
-                        <div class="resource-item">
-                          <!-- 차트 영역 -->
-                          <div class="chart-box" aria-label="MEME#2 사용률 차트"></div>
-                        </div>
+                      <div class="resource-item">
+                        <!-- 차트 영역 (MEME) -->
+                        <div class="donut-placeholder"></div>
                       </div>
-
                     </div>
+
+                    <div class="resource-group">
+                      <div class="resource-item">
+                        <!-- 차트 영역 (GPU) -->
+                        <div class="donut-placeholder"></div>
+                      </div>
+                      <div class="resource-item">
+                        <!-- 차트 영역 (CPU) -->
+                        <div class="donut-placeholder"></div>
+                      </div>
+                      <div class="resource-item">
+                        <!-- 차트 영역 (MEME) -->
+                        <div class="donut-placeholder"></div>
+                      </div>
+                    </div>
+
+                    <div class="resource-group">
+                      <div class="resource-item">
+                        <!-- 차트 영역 (GPU) -->
+                        <div class="donut-placeholder"></div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+
+                <!-- 모델 호출 TOP10 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">모델 호출 건수 Top 10</p>
+                    <a href="#" class="dashboard-card-link">바로가기</a>
                   </div>
 
+                  <ul class="rank-list">
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--model icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">믿음 2.0 Pro</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--model icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">믿음 2.0 Pro</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+                    
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--model icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">믿음 2.0 Pro</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+                    
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--model icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">믿음 2.0 Pro</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+                    
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--model icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">믿음 2.0 Pro</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- API 호출 TOP10 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">API 호출 건수 Top 10</p>
+                    <a href="#" class="dashboard-card-link">바로가기</a>
+                  </div>
+
+                  <ul class="rank-list">
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--api icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">회의관리</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--api icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">회의관리</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--api icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">회의관리</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--api icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">회의관리</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+
+                    <li class="rank-item">
+                      <div class="rank-icon">
+                          <span class="icon24 icon--api icon--basic"></span>
+                      </div>
+                      <div class="rank-text">
+                        <p class="rank-desc">(일반 챗봇 서비스 프로젝트)</p>
+                        <p class="rank-title">회의관리</p>
+                      </div>
+                      <strong class="rank-value">34,208,964</strong>
+                    </li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- 하단 차트 영역 -->
+              <div class="dashboard-charts">
+                <!-- API 키별 모델 건수 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">API 키별 모델 건수</p>
+                    <button type="button" class="btn-outline-gray-s">
+                      <span class="icon18 icon--filter icon--basic"></span>
+                      회의관리
+                    </button>
+                  </div>
+                  <div class="chart-item">
+                    <!-- 차트 영역 -->
+                  </div>
+                </div>
+
+                <!-- 모델 호출 건수 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">모델 호출 건수</p>
+                    <button type="button" class="btn-outline-gray-s">
+                      <span class="icon18 icon--filter icon--basic"></span>
+                      믿음 2.0 Pro
+                    </button>
+                  </div>
+                  <div class="chart-item">
+                    <!-- 차트 영역 -->
+                  </div>
+                </div>
+
+                <!-- API 키호출 건수 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">API 키호출 건수</p>
+                    <button type="button" class="btn-outline-gray-s">
+                      <span class="icon18 icon--filter icon--basic"></span>
+                      AI 업무지원
+                    </button>
+                  </div>
+                  <div class="chart-item">
+                    <!-- 차트 영역 -->
+                  </div>
+                </div>
+
+                <!-- API 키별 모델 건수 -->
+                <div class="dashboard-card">
+                  <div class="dashboard-card-head">
+                    <p class="dashboard-card-title">API 키별 모델 건수</p>
+                    <button type="button" class="btn-outline-gray-s">
+                      <span class="icon18 icon--filter icon--basic"></span>
+                      AI 업무지원
+                    </button>
+                    <select class="form-select form-select-s">
+                      <option value="op1" selected>믿음 2.0 Pro</option>
+                    </select>
+                  </div>
+                  <div class="chart-item">
+                    <!-- 차트 영역 -->
+                  </div>
                 </div>
               </div>
 
-              <!-- 우측 컬럼 -->
-              <div class="dashboard-col dashboard-col--right">
-                <div class="panel">
-
-                  <div class="panel-head">
-                    <p class="panel-title">배포 모델 및 호출 건수</p>
-                  </div>
-
-                  <div class="panel-body">
-                    <div class="stat-grid">
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--book icon--basic"></span>
-                        </div>
-                        <p class="stat-name">믿음 2.0 Pro</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--book icon--basic"></span>
-                        </div>
-                        <p class="stat-name">WISE LLM</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--book icon--basic"></span>
-                        </div>
-                        <p class="stat-name">KONANENT-11</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--book icon--basic"></span>
-                        </div>
-                        <p class="stat-name">Solar Pro2</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-
-                <div class="panel">
-
-                  <div class="panel-head">
-                    <p class="panel-title">API 키 및 호출 건수</p>
-                  </div>
-
-                  <div class="panel-body">
-                    <div class="stat-grid">
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--stack icon--basic"></span>
-                        </div>
-                        <p class="stat-name">회의 관리</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--stack icon--basic"></span>
-                        </div>
-                        <p class="stat-name">업무지원</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--stack icon--basic"></span>
-                        </div>
-                        <p class="stat-name">법률 및 행정심판</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                      <div class="stat-card">
-                        <div class="stat-icon">
-                          <span class="icon24 icon--stack icon--basic"></span>
-                        </div>
-                        <p class="stat-name">질의 응답</p>
-                        <p class="stat-value">34,208,964</p>
-                      </div>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
 
             </div>
           </div>
@@ -311,6 +435,8 @@
 
   </div>
 
+  <!-- JS -->
+  <script src="../assets/js/datepicker.js"></script>
 
 </body>
 </html>

@@ -403,6 +403,13 @@ button {
   font-weight: 400; 
   color: var(--color-text-muted);
 }
+.caption-text {
+  font-size: 1.3rem;
+  line-height: 150%;
+  letter-spacing: 0; 
+  font-weight: 400; 
+  color: var(--color-text-muted);
+}
 
 
 /* ======= 입력 필드 : input[type="text"] ======= */
@@ -631,6 +638,7 @@ input[type="search"]::-webkit-search-results-decoration {
   background: var(--color-input-surface-disabled);
   color: var(--color-text-disabled);
   cursor: default;
+  opacity: 1;
 }
 .form-select:has(option[value=""]:checked) {
   color: var(--color-text-disabled);
@@ -1809,6 +1817,38 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 
+/* ===== 세그먼트 컨트롤  ===== */
+.segmented-control {
+  display: inline-flex;
+  background: var(--color-background-basic);
+  border-radius: 10px;
+  height: 44px;
+  padding: 4px 5px;
+  overflow: hidden;
+}
+.segment-btn {
+  height: 100%;
+  padding: 0 14px;
+  min-width: 66px;
+  border-radius: 8px;
+  background: none;
+  border: 0;
+  font-size: 1.6rem; 
+  line-height: 150%; 
+  letter-spacing: 0; 
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+.segment-btn.is-active {
+  border: 1px solid var(--color-border-basic);
+  background: var(--color-background-subtle);
+  color: var(--color-text-basic);
+}
+.segment-btn:hover {
+  color: var(--color-text-basic);
+}
+
+
 /* ===== 요약 바 ===== */
 .stat-bar {
   margin: 0px 26px;
@@ -1938,4 +1978,84 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .bulk-action-right button {
   width: 120px;
+}
+
+
+/* ======= 모달 팝업 ======= */
+/* 공통 요소 : 백드롭, 컨테이너 */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  z-index: var(--z-backdrop);
+}
+.modal-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.modal-basic {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: var(--z-modal);
+  transition: opacity 0.18s ease;
+}
+.modal-basic.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* modal-basic 기본타입  */
+.modal-basic .modal-panel {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100dvh - 48px);
+  max-height: calc(100vh - 48px);
+  min-width: 542px;
+  max-width: min(90vw, 542px);
+  overflow: hidden; 
+  background: var(--color-background-subtle);
+  border-radius: 10px;
+  outline: none;
+}
+.modal-basic .modal-panel > form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.modal-basic .modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: 0;
+  padding: 22px 20px 8px 24px;
+}
+.modal-basic .modal-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 150%; 
+  letter-spacing: 0;
+  padding: 18px 26px 18px 26px;
+}
+.modal-basic .modal-foot {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 10px 24px 20px 24px;
 }
